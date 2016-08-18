@@ -1,0 +1,18 @@
+﻿ZCZC 136
+
+WEPA40 PHEB 000000
+
+TSUPAC
+
++++++++++++++++++++++++++
+
+This is a test message.
++++++++++++++++++++++++++
+
+
+TEST.
+
+$$
+
+NNNN
+

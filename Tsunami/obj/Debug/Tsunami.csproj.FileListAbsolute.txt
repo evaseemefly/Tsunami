@@ -1,0 +1,37 @@
+C:\Users\victor\Documents\Visual Studio 2015\Projects\Tsunami\Tsunami\bin\Debug\Tsunami.exe.config
+C:\Users\victor\Documents\Visual Studio 2015\Projects\Tsunami\Tsunami\bin\Debug\Tsunami.exe
+C:\Users\victor\Documents\Visual Studio 2015\Projects\Tsunami\Tsunami\bin\Debug\Tsunami.pdb
+C:\Users\victor\Documents\Visual Studio 2015\Projects\Tsunami\Tsunami\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\victor\Documents\Visual Studio 2015\Projects\Tsunami\Tsunami\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\victor\Documents\Visual Studio 2015\Projects\Tsunami\Tsunami\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\victor\Documents\Visual Studio 2015\Projects\Tsunami\Tsunami\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\victor\Documents\Visual Studio 2015\Projects\Tsunami\Tsunami\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\victor\Documents\Visual Studio 2015\Projects\Tsunami\Tsunami\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\victor\Documents\Visual Studio 2015\Projects\Tsunami\Tsunami\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\victor\Documents\Visual Studio 2015\Projects\Tsunami\Tsunami\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\victor\Documents\Visual Studio 2015\Projects\Tsunami\Tsunami\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\victor\Documents\Visual Studio 2015\Projects\Tsunami\Tsunami\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\victor\Documents\Visual Studio 2015\Projects\Tsunami\Tsunami\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\victor\Documents\Visual Studio 2015\Projects\Tsunami\Tsunami\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\victor\Documents\Visual Studio 2015\Projects\Tsunami\Tsunami\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\victor\Documents\Visual Studio 2015\Projects\Tsunami\Tsunami\obj\Debug\Tsunami.Form1.resources
+C:\Users\victor\Documents\Visual Studio 2015\Projects\Tsunami\Tsunami\obj\Debug\Tsunami.Properties.Resources.resources
+C:\Users\victor\Documents\Visual Studio 2015\Projects\Tsunami\Tsunami\obj\Debug\Tsunami.csproj.GenerateResource.Cache
+C:\Users\victor\Documents\Visual Studio 2015\Projects\Tsunami\Tsunami\obj\Debug\Tsunami.exe
+C:\Users\victor\Documents\Visual Studio 2015\Projects\Tsunami\Tsunami\obj\Debug\Tsunami.pdb
+C:\Users\victor\documents\visual studio 2015\Projects\Tsunami\Tsunami\obj\Debug\Tsunami.csprojResolveAssemblyReference.cache
+C:\Users\victor\documents\visual studio 2015\Projects\Tsunami\Tsunami\obj\Debug\Interop.MediaPlayer.dll
+C:\Users\victor\documents\visual studio 2015\Projects\Tsunami\Tsunami\obj\Debug\Tsunami.csproj.ResolveComReference.cache
+E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\bin\Debug\Tsunami.exe.config
+E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Interop.MediaPlayer.dll
+E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.csproj.ResolveComReference.cache
+E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.exe
+E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.pdb
+E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\bin\Debug\Tsunami.exe
+E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\bin\Debug\Tsunami.pdb
+E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.csprojResolveAssemblyReference.cache
+E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.Form1.resources
+E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.Properties.Resources.resources
+E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.csproj.GenerateResource.Cache
