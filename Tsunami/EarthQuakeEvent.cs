@@ -13,16 +13,21 @@ namespace Tsunami
 {
     public class EarthQuakeEvent
     {
-        public static string backupDir;
-        public static string inputDir;
+        //public static string backupDir { get; set; }
 
+        /// <summary>
+        /// 监控路径
+        /// </summary>
+        public static string watcher_Path { get; set; }
 
-
+        public static string copy_Path { get; set; }
 
         private static Form1.DgShowMessage dg_show;
 
-        public EarthQuakeEvent()
+        public EarthQuakeEvent(string watcher_path,string copy_path)
         {
+            watcher_Path = watcher_path;
+            copy_Path = copy_path;
             Initialize();
         }
 
@@ -30,16 +35,16 @@ namespace Tsunami
         {
             String temp;
             temp = System.Windows.Forms.Application.StartupPath;
-            backupDir = temp + "\\backup\\";
-            StreamReader sr = new StreamReader(temp + "\\config.txt", Encoding.Default);
-            inputDir = sr.ReadLine();
+            //backupDir = temp + "\\backup\\";
+            //StreamReader sr = new StreamReader(temp + "\\config.txt", Encoding.Default);
+            //watcher_Path = sr.ReadLine();
 
-            if (inputDir == null)
+            if (watcher_Path == null)
             {
                 MessageBox.Show("please write GTS products directory into the file of config.txt");
                 System.Environment.Exit(0);
             }
-            sr.Close();
+            //sr.Close();
 
         }
         public void Run(object dg)
@@ -48,7 +53,7 @@ namespace Tsunami
             //while (true)
             //{
             dg_show = dg as Form1.DgShowMessage;
-                WatcherStrat(inputDir, "*.txt");
+                WatcherStrat(watcher_Path, "*.txt");
                 //Thread.Sleep(5000);
             //}
 
@@ -79,7 +84,7 @@ namespace Tsunami
             {
                 try
                 {
-                    System.IO.File.Copy(e.FullPath, backupDir + e.Name, true);
+                    System.IO.File.Copy(e.FullPath,Path.Combine(copy_Path , e.Name), true);
                     ShowAndSong(e.Name);
                     return;
                 }

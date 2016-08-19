@@ -35,3 +35,16 @@ E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.csprojReso
 E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.Form1.resources
 E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.Properties.Resources.resources
 E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.csproj.GenerateResource.Cache
+D:\02编程\2016年\01协同开发\海啸\Tsunami\Tsunami\bin\Debug\Tsunami.exe.config
+D:\02编程\2016年\01协同开发\海啸\Tsunami\Tsunami\bin\Debug\Tsunami.exe
+D:\02编程\2016年\01协同开发\海啸\Tsunami\Tsunami\bin\Debug\Tsunami.pdb
+D:\02编程\2016年\01协同开发\海啸\Tsunami\Tsunami\bin\Debug\Microsoft.DirectX.AudioVideoPlayback.dll
+D:\02编程\2016年\01协同开发\海啸\Tsunami\Tsunami\bin\Debug\Microsoft.DirectX.AudioVideoPlayback.xml
+D:\02编程\2016年\01协同开发\海啸\Tsunami\Tsunami\obj\Debug\Interop.MediaPlayer.dll
+D:\02编程\2016年\01协同开发\海啸\Tsunami\Tsunami\obj\Debug\Tsunami.csproj.ResolveComReference.cache
+D:\02编程\2016年\01协同开发\海啸\Tsunami\Tsunami\obj\Debug\Tsunami.Form1.resources
+D:\02编程\2016年\01协同开发\海啸\Tsunami\Tsunami\obj\Debug\Tsunami.Properties.Resources.resources
+D:\02编程\2016年\01协同开发\海啸\Tsunami\Tsunami\obj\Debug\Tsunami.SettingForm.resources
+D:\02编程\2016年\01协同开发\海啸\Tsunami\Tsunami\obj\Debug\Tsunami.csproj.GenerateResource.Cache
+D:\02编程\2016年\01协同开发\海啸\Tsunami\Tsunami\obj\Debug\Tsunami.exe
+D:\02编程\2016年\01协同开发\海啸\Tsunami\Tsunami\obj\Debug\Tsunami.pdb

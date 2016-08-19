@@ -6,6 +6,8 @@ using System.Runtime.InteropServices;
 using System.IO;
 using System.Reflection;
 using System.Media;
+using Microsoft.DirectX.AudioVideoPlayback;
+using System.Drawing;
 
 namespace Tsunami
 {
@@ -16,11 +18,11 @@ namespace Tsunami
 
         public static uint SND_ASYNC = 0x0001;
         public static uint SND_FILENAME = 0x00020000;
-        
-       
-        
-//        public static extern uint mciSendString(string lpstrCommand,
-//string lpstrReturnString, uint uReturnLength, uint hWndCallback);
+
+        public string watcher_Path = null;
+
+        public string copy_Path = null;
+
        [DllImport("winmm.dll")]
        static extern bool PlaySound(string pszSound, UIntPtr hmod, uint fdwSound);
         public Form1()
@@ -32,12 +34,8 @@ namespace Tsunami
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            EarthQuakeEvent eqe = new EarthQuakeEvent();
-            DgShowMessage dg = new DgShowMessage(ShowMessage);
-            Thread t = new Thread(new ParameterizedThreadStart(eqe.Run));
-             t.Start(dg);
-            t.IsBackground = true;
-           
+            this.dataGridView1.DefaultCellStyle.Font = new Font("Tahoma", 10, FontStyle.Bold);
+
         }
 
        public delegate void DgShowMessage(string msg);
@@ -59,27 +57,45 @@ namespace Tsunami
             PlaySong();
             
             System.Media.SystemSounds.Question.Play();
-            System.Media.SystemSounds.Question.Play();
-            System.Media.SystemSounds.Question.Play();
-            System.Media.SystemSounds.Question.Play();
-            System.Media.SystemSounds.Question.Play();
-            System.Media.SystemSounds.Question.Play();
-
-
         }
       
         public void PlaySong()
         {
-            PlaySound("c:\\sound.wav", UIntPtr.Zero,
-          (uint)0x0010);
-            System.Media.SoundPlayer simpleSound = new System.Media.SoundPlayer(@"c:\sound.wav");
-            simpleSound.Play();
-            System.Media.SoundPlayer sp = new System.Media.SoundPlayer();
-            string tempt = Path.Combine(System.IO.Directory.GetCurrentDirectory(), "sound.wav");
-                //assembly = Assembly.GetExecutingAssembly();
-                //sp = new System.Media.SoundPlayer(assembly.GetManifestResourceStream(tempt));
-                sp.SoundLocation= "C:/sound.wav";
-                sp.Play();
+            //Audio audio = new Audio(@"D:\音乐\2.wav");
+            //audio.Play();
+            //SoundPlayer player = new SoundPlayer();
+            ////System.Media.SystemSounds.Asterisk.Play();
+            //while (true)
+            //{
+            //    System.Media.SystemSounds.Beep.Play();
+            //}
+            
+            ////System.Media.SystemSounds.Exclamation.Play();
+            ////System.Media.SystemSounds.Hand.Play();
+            ////System.Media.SystemSounds.Question.Play();
+            //player.SoundLocation = @"D:\音乐\2.wav";
+            //player.PlayLooping();
+            //player.Load();
+            //player.LoadAsync();
+            try
+            {
+                //player.PlayLooping();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            
+
+            //SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\evase\Documents\A\1.wav");
+            //simpleSound.Play();
+            //System.Media.SoundPlayer sp = new System.Media.SoundPlayer();
+            //string tempt = Path.Combine(System.IO.Directory.GetCurrentDirectory(), "sound.wav");
+            //    sp.SoundLocation= @"C:\Users\evase\Documents\A\1.wav";
+            //    sp.Play();
+
+            
 
             try
             {
@@ -148,14 +164,52 @@ namespace Tsunami
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            //将选中的行字体取消加粗
+            //dataGridView1.SelectedRows[0].DefaultCellStyle.Font= new Font("Tahoma", 10, FontStyle.Regular);
+
+            dataGridView1.Rows[e.RowIndex].DefaultCellStyle.Font= new Font("Tahoma", 10, FontStyle.Regular);
+
             //1 获取文件名
             var name = this.dataGridView1[e.ColumnIndex, e.RowIndex].Value.ToString();
-            string fullPath = Path.Combine(Application.StartupPath, "backup", name);
+            
+            string fullPath = Path.Combine(copy_Path, name);
             //2           
-            this.richTextBox1.Text = ReadFile(fullPath).ToString();
+            var str= ReadFile(fullPath).ToString();
+            this.richTextBox1.Text = str;
 
 
 
+        }
+
+        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Environment.Exit(0);
+        }
+
+        private void 设置ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SettingForm settingForm = new SettingForm();
+            settingForm.watcher_path = this.watcher_Path == null ? null : this.watcher_Path;
+            settingForm.ShowDialog();
+            if (settingForm.DialogResult == DialogResult.OK)
+            {
+                this.copy_Path = settingForm.copy_path;
+                this.watcher_Path = settingForm.watcher_path;
+            }
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            EarthQuakeEvent eqe = new EarthQuakeEvent(watcher_Path,copy_Path);
+            DgShowMessage dg = new DgShowMessage(ShowMessage);
+            Thread t = new Thread(new ParameterizedThreadStart(eqe.Run));
+            t.Start(dg);
+            t.IsBackground = true;
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            PlaySong();
         }
     }
 
