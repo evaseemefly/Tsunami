@@ -198,8 +198,28 @@ namespace Tsunami
             }
         }
 
+        /// <summary>
+        /// 判断几个配置文件及监控路径是否已经加载上
+        /// </summary>
+        /// <returns></returns>
+        private bool CheckLoadConfig()
+        {
+            if (this.copy_Path == null || watcher_Path == null)
+            {
+                MessageBox.Show("请选择监控路径", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return false;
+            }
+            
+            return true;
+        }
+
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            if (!CheckLoadConfig())
+            {
+                return;
+            }
             EarthQuakeEvent eqe = new EarthQuakeEvent(watcher_Path,copy_Path);
             DgShowMessage dg = new DgShowMessage(ShowMessage);
             Thread t = new Thread(new ParameterizedThreadStart(eqe.Run));

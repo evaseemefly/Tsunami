@@ -48,3 +48,6 @@ D:\02编程\2016年\01协同开发\海啸\Tsunami\Tsunami\obj\Debug\Tsunami.Sett
 D:\02编程\2016年\01协同开发\海啸\Tsunami\Tsunami\obj\Debug\Tsunami.csproj.GenerateResource.Cache
 D:\02编程\2016年\01协同开发\海啸\Tsunami\Tsunami\obj\Debug\Tsunami.exe
 D:\02编程\2016年\01协同开发\海啸\Tsunami\Tsunami\obj\Debug\Tsunami.pdb
+E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\bin\Debug\Microsoft.DirectX.AudioVideoPlayback.dll
+E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\bin\Debug\Microsoft.DirectX.AudioVideoPlayback.xml
+E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.SettingForm.resources

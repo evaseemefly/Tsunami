@@ -116,6 +116,10 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ICON\alarm_off_16.png" />
+    <Content Include="ICON\alarm_on_16.png" />
+    <Content Include="ICON\alarm_off_24.png" />
+    <Content Include="ICON\alarm_on_24.png" />
     <Content Include="ICON\btn_end.png" />
     <Content Include="ICON\btn_end_24.png" />
     <Content Include="ICON\btn_start.png" />
@@ -123,6 +127,10 @@
     <Content Include="ICON\end_player_24px_43219_easyicon.net.png" />
     <Content Include="ICON\refresh_16px_1165520_easyicon.net.png" />
     <Content Include="ICON\refresh_24px_1165520_easyicon.net.png" />
+    <Content Include="ICON\sea_16px.png" />
+    <Content Include="ICON\sea_16px.ico" />
+    <Content Include="ICON\sea_24px.png" />
+    <Content Include="ICON\sea_24px.ico" />
     <Content Include="ICON\sign_ban_15.223300970874px_1185684_easyicon.net.png" />
     <Content Include="ICON\sign_ban_22.834951456311px_1185684_easyicon.net.png" />
     <Content Include="Libs\Microsoft.DirectX.AudioVideoPlayback.dll" />
