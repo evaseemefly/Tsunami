@@ -8,23 +8,20 @@ using System.Reflection;
 using System.Media;
 using Microsoft.DirectX.AudioVideoPlayback;
 using System.Drawing;
+using System.Configuration;
 
 namespace Tsunami
 {
     
     public partial class Form1 : Form
     {
-        
-
-        public static uint SND_ASYNC = 0x0001;
-        public static uint SND_FILENAME = 0x00020000;
 
         public string watcher_Path = null;
 
         public string copy_Path = null;
 
-       [DllImport("winmm.dll")]
-       static extern bool PlaySound(string pszSound, UIntPtr hmod, uint fdwSound);
+        SoundPlayer player = new SoundPlayer();
+
         public Form1()
         {
             InitializeComponent();
@@ -48,79 +45,50 @@ namespace Tsunami
             {
                 this.dataGridView1.Rows.RemoveAt(0);
             }
-            this.dataGridView1.Rows.Add(msg);
-            //this.dataGridView1.Rows[this.dataGridView1.Rows.Count].DefaultCellStyle.Font = new Font("宋体", 9, FontStyle.Strikeout);
-            //this.dataGridView1.Rows[this.dataGridView1.Rows.Count].DefaultCellStyle.BackColor = Color.Green;
-            //this.dataGridView1.Rows[this.dataGridView1.Rows.Count].DefaultCellStyle.BackColor = Color.Green;
-            //this.dataGridView1.Rows[this.dataGridView1.Rows.Count].Cells[0].Style.ForeColor = Color.Red;
-            //this.dataGridView1.Rows[this.dataGridView1.Rows.Count].DefaultCellStyle.BackColor = Color.Blue;
+            this.dataGridView1.Rows.Add(msg);           
             PlaySong();
-            
-            System.Media.SystemSounds.Question.Play();
         }
       
+        /// <summary>
+        /// 读取配置文件中的声音路径
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        private string LoadAppSetting(string key)
+        {
+            foreach (string item in ConfigurationManager.AppSettings)
+            {
+                if (item == key)
+                {
+                    return ConfigurationManager.AppSettings[key];
+                }
+            }
+            return null;
+        }
+
+        public void LoadSong()
+        {
+            //加载音乐文件
+            var sonpath = LoadAppSetting("songpath");
+            player.SoundLocation = @sonpath;
+            player.Load();
+        }
+
         public void PlaySong()
         {
-            //Audio audio = new Audio(@"D:\音乐\2.wav");
-            //audio.Play();
-            //SoundPlayer player = new SoundPlayer();
-            ////System.Media.SystemSounds.Asterisk.Play();
-            //while (true)
-            //{
-            //    System.Media.SystemSounds.Beep.Play();
-            //}
-            
-            ////System.Media.SystemSounds.Exclamation.Play();
-            ////System.Media.SystemSounds.Hand.Play();
-            ////System.Media.SystemSounds.Question.Play();
-            //player.SoundLocation = @"D:\音乐\2.wav";
-            //player.PlayLooping();
-            //player.Load();
-            //player.LoadAsync();
+            this.player.PlayLooping();
             try
             {
-                //player.PlayLooping();
             }
             catch (Exception ex)
             {
-
                 throw;
-            }
-            
-
-            //SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\evase\Documents\A\1.wav");
-            //simpleSound.Play();
-            //System.Media.SoundPlayer sp = new System.Media.SoundPlayer();
-            //string tempt = Path.Combine(System.IO.Directory.GetCurrentDirectory(), "sound.wav");
-            //    sp.SoundLocation= @"C:\Users\evase\Documents\A\1.wav";
-            //    sp.Play();
-
-            
-
-            try
-            {
-                //Assembly assembly;
-                
-                //sp.SoundLocation = Path.Combine(System.IO.Directory.GetCurrentDirectory(), "sound.wav");
-                //sp.PlayLooping();
-                
-                //mciSendString(@"close temp_alias", null, 0, 0);
-                //mciSendString(@"open " + tempt + " alias temp_alias", null, 0, 0);
-                //mciSendString("play temp_alias repeat", null, 0, 0);
-            }
-            catch (Exception ex)
-            {
-
-                throw;
-            }
-            
-
-            //mciSendString(@"open ""sound.wav"" alias temp_alias", null, 0, 0);
-            //mciSendString("play temp_alias repeat", null, 0, 0);
-
+            }            
         }
         public void StopSong()
         {
+            this.player.Stop();
+            
             //mciSendString(@"close temp_alias", null, 0, 0);
 
         }
@@ -168,16 +136,16 @@ namespace Tsunami
             //dataGridView1.SelectedRows[0].DefaultCellStyle.Font= new Font("Tahoma", 10, FontStyle.Regular);
 
             dataGridView1.Rows[e.RowIndex].DefaultCellStyle.Font= new Font("Tahoma", 10, FontStyle.Regular);
+            //1 停止播放音乐
+            StopSong();
 
-            //1 获取文件名
+            //2 获取文件名
             var name = this.dataGridView1[e.ColumnIndex, e.RowIndex].Value.ToString();
             
             string fullPath = Path.Combine(copy_Path, name);
-            //2           
+            //3 在右侧的textbox中展示          
             var str= ReadFile(fullPath).ToString();
             this.richTextBox1.Text = str;
-
-
 
         }
 
@@ -229,7 +197,12 @@ namespace Tsunami
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            PlaySong();
+            LoadSong();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            StopSong();
         }
     }
 
