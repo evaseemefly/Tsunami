@@ -35,9 +35,6 @@ namespace Tsunami
         {
             String temp;
             temp = System.Windows.Forms.Application.StartupPath;
-            //backupDir = temp + "\\backup\\";
-            //StreamReader sr = new StreamReader(temp + "\\config.txt", Encoding.Default);
-            //watcher_Path = sr.ReadLine();
 
             if (watcher_Path == null)
             {
@@ -50,35 +47,31 @@ namespace Tsunami
         public void Run(object dg)
         {
 
-            //while (true)
-            //{
             dg_show = dg as Form1.DgShowMessage;
                 WatcherStrat(watcher_Path, "*.txt");
-                //Thread.Sleep(5000);
-            //}
-
 
         }
-        private static void WatcherStrat(string path, string filter)
+
+        private void WatcherStrat(string path, string filter)
         {
 
             FileSystemWatcher watcher = new FileSystemWatcher();
             watcher.Path = path;
             watcher.Filter = filter;
             watcher.EnableRaisingEvents = true;
-            watcher.IncludeSubdirectories = false;
+            watcher.IncludeSubdirectories = true;
             watcher.NotifyFilter = NotifyFilters.FileName;
             watcher.Created += new FileSystemEventHandler(OnProcess);
             return;
         }
 
-        private static void ShowAndSong(string msg)
+        private void ShowAndSong(string msg)
         {
-            dg_show(msg);
+            dg_show(msg,DateTime.Now);
            // PlaySong();
         }
 
-        private static void OnProcess(object source, FileSystemEventArgs e)
+        private void OnProcess(object source, FileSystemEventArgs e)
         {
             if (e.ChangeType == WatcherChangeTypes.Created)
             {
@@ -92,27 +85,9 @@ namespace Tsunami
                 {
                     return;
                 }
-                
-                //Form1 form1_obj = new Form1();
-                //if (form1_obj.dataGridView1.Rows.Count < 5)
-                //{
-                //    form1_obj.dataGridView1.Rows.Add(e.Name);
-                //}
 
-//                DataGridViewRow row = new DataGridViewRow();
-//                DataGridViewTextBoxCell textboxcell = new DataGridViewTextBoxCell();
-//                textboxcell.Value = e.Name;
-//                row.Cells.Add(textboxcell);
-
-               
              }
-        }
-
-        public void ShowMsg(string msg)
-        {
-
-        }
-
+        }        
 
     }
 }

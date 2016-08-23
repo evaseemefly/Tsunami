@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -42,6 +41,9 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lv_fileInfo = new System.Windows.Forms.ListView();
+            this.col_fileName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,31 +60,24 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
-            this.dataGridView1.Location = new System.Drawing.Point(0, -1);
+            this.dataGridView1.Location = new System.Drawing.Point(211, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 4;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(127, 219);
+            this.dataGridView1.Size = new System.Drawing.Size(184, 212);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "地震事件";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 120;
             // 
             // richTextBox1
             // 
             this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.Location = new System.Drawing.Point(125, 0);
+            this.richTextBox1.Location = new System.Drawing.Point(401, 0);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(735, 219);
+            this.richTextBox1.Size = new System.Drawing.Size(595, 219);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             // 
@@ -90,11 +85,12 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.lv_fileInfo);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.richTextBox1);
             this.groupBox1.Location = new System.Drawing.Point(0, 378);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(860, 218);
+            this.groupBox1.Size = new System.Drawing.Size(996, 218);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -107,7 +103,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 53);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(860, 327);
+            this.pictureBox1.Size = new System.Drawing.Size(996, 327);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -118,7 +114,7 @@
             this.菜单ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(860, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(996, 25);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -153,7 +149,7 @@
             this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 25);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(860, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(996, 25);
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -184,11 +180,35 @@
             this.toolStripButton3.Text = "关闭报警";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "地震事件";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 190;
+            // 
+            // lv_fileInfo
+            // 
+            this.lv_fileInfo.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.col_fileName});
+            this.lv_fileInfo.Location = new System.Drawing.Point(6, 0);
+            this.lv_fileInfo.Name = "lv_fileInfo";
+            this.lv_fileInfo.Size = new System.Drawing.Size(199, 212);
+            this.lv_fileInfo.TabIndex = 3;
+            this.lv_fileInfo.UseCompatibleStateImageBehavior = false;
+            this.lv_fileInfo.View = System.Windows.Forms.View.Details;
+            this.lv_fileInfo.Click += new System.EventHandler(this.lv_fileInfo_Click);
+            // 
+            // col_fileName
+            // 
+            this.col_fileName.Text = "文件名称";
+            this.col_fileName.Width = 180;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 596);
+            this.ClientSize = new System.Drawing.Size(996, 596);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
@@ -212,7 +232,6 @@
 
         #endregion
         public System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -224,6 +243,9 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.ListView lv_fileInfo;
+        private System.Windows.Forms.ColumnHeader col_fileName;
     }
 }
 
