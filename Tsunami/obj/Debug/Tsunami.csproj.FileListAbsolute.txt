@@ -51,6 +51,12 @@ D:\01编程\02协作开发\海啸\Tsunami\Tsunami\obj\Debug\Tsunami.Form1.resour
 D:\01编程\02协作开发\海啸\Tsunami\Tsunami\obj\Debug\Tsunami.Properties.Resources.resources
 D:\01编程\02协作开发\海啸\Tsunami\Tsunami\obj\Debug\Tsunami.SettingForm.resources
 D:\01编程\02协作开发\海啸\Tsunami\Tsunami\obj\Debug\Tsunami.csproj.GenerateResource.Cache
+E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Interop.MediaPlayer.dll
+E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.csproj.ResolveComReference.cache
+E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.Form1.resources
+E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.Properties.Resources.resources
+E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.SettingForm.resources
+E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.csproj.GenerateResource.Cache
 E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\bin\Debug\Tsunami.exe.config
 E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\bin\Debug\Tsunami.exe
 E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\bin\Debug\Tsunami.pdb
@@ -58,12 +64,6 @@ E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\bin\Debug\Microsoft.DirectX.
 E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\bin\Debug\Microsoft.DirectX.AudioVideoPlayback.xml
 E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
-E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.csprojResolveAssemblyReference.cache
-E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Interop.MediaPlayer.dll
-E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.csproj.ResolveComReference.cache
-E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.Form1.resources
-E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.Properties.Resources.resources
-E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.SettingForm.resources
-E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.csproj.GenerateResource.Cache
 E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.exe
 E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.pdb
+E:\03协同开发\prb海啸\Tsunami\Tsunami\Tsunami\obj\Debug\Tsunami.csprojResolveAssemblyReference.cache
